@@ -31,8 +31,8 @@ export class CatsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateCatDto: UpdateCatDto) {
-    return this.catsService.update(+id, updateCatDto);
+  update(@Param('id') id: number, @Body() updateCatDto: UpdateCatDto) {
+    return this.catsService.update(id, updateCatDto);
   }
 
   @Delete(':id')
