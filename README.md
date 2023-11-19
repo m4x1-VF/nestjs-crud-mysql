@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple NestJS CRUD application that uses the [NestJS TypeORM](https://docs.nestjs.com/techniques/database) module to connect to a MySQL database. The database is hosted in a docker container.
+This is a simple NestJS CRUD application that uses the [NestJS TypeORM](https://docs.nestjs.com/techniques/database) module to connect to a MySQL database. The database is hosted in a docker container. JSON Web Tokens (JWT) are used to allow users to register on your platform and access their accounts securely.
 
 ## Installation
 
