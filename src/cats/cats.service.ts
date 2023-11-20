@@ -32,8 +32,7 @@ export class CatsService {
   }
 
   async update(id: number, updateCatDto: UpdateCatDto) {
-    //return await this.catRepository.update(id, updateCatDto);
-    return;
+    return; //await this.catRepository.update(id, updateCatDto);
   }
 
   async remove(id: number) {
