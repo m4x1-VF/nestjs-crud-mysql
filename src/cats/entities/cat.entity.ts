@@ -1,5 +1,12 @@
-import { Breed } from 'src/breed/entities/breed.entity';
-import { Column, DeleteDateColumn, Entity, ManyToOne } from 'typeorm';
+import { Breed } from '../../breed/entities/breed.entity';
+import { User } from '../../users/entities/user.entity';
+import {
+  Column,
+  DeleteDateColumn,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+} from 'typeorm';
 
 @Entity()
 export class Cat {
@@ -12,9 +19,12 @@ export class Cat {
   @Column()
   age: number;
 
+  @DeleteDateColumn()
+  deletedAt: Date;
+
   @ManyToOne(() => Breed, (breed) => breed.id, { eager: true })
   breed: Breed;
 
-  @DeleteDateColumn()
-  deletedAt: Date;
+  @ManyToOne(() => User, (user) => user.id, { eager: true })
+  user: User;
 }
